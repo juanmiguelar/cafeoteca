@@ -12,10 +12,6 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'es' },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined',
-        },
       ],
     },
   },
@@ -30,6 +26,8 @@ export default defineNuxtConfig({
       },
     },
     display: 'swap',
+    download: true,
+    overwriting: false,
   },
 
   site: {
@@ -44,4 +42,13 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
+
+  nitro: {
+    preset: 'vercel',
+  },
+
+  routeRules: {
+    // ISR for all pages by default
+    '/**': { isr: 3600 },
+  },
 })

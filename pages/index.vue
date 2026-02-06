@@ -2,84 +2,109 @@
   <div>
     <SeoMeta />
 
-    <!-- Hero Section -->
-    <section class="px-4 py-6">
-      <div class="relative w-full h-[450px] rounded-xl overflow-hidden shadow-xl group">
-        <img
-          alt="Mesa de madera con café de especialidad y postres artesanales bajo luz natural en Cafeoteca"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCntQ0eW-ZyfLsa5NL0vE34jLgktpfOZhBbz5BZTrqc_iCTSiDkHuRUdrtCuOqVEzt0rkyyvOWZhzAFPMhFHqHsb8YqGnOwwxQgln3KKFiEcFxhGdBFZpr7SpQpRPp2zGwBieJ1E6UcscL0GA63JrfZ2DZesOSiDcFym_AwpQO8Sw32hTzG0mftH_KLE3NWt5pWLG9UdAiip8b0JprIbIGDbrpYLMr-9_KGl-3AQnEPOaE79xO9SWB_pDml0jUkRdrSP4rB-3IC8dc"
-          loading="eager"
-          width="800"
-          height="450"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6">
-          <span class="bg-secondary text-black text-xs font-bold px-3 py-1 rounded-full w-fit mb-3 uppercase tracking-wider">
-            Cosecha 25/26
-          </span>
-          <h1 class="text-white font-display text-4xl font-bold leading-tight mb-2">Café Como Cultura</h1>
-          <p class="text-gray-200 text-sm font-medium opacity-90 mb-4">
-            Recepción de muestras de café de especialidad.
-          </p>
+    <!-- Hero Section — World's 100 Best Coffee Shops -->
+    <section class="px-4 sm:px-6 lg:px-8 py-6">
+      <div class="relative w-full rounded-xl lg:rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="lg:flex lg:items-center">
+          <!-- Image side -->
+          <div class="relative h-[280px] sm:h-[350px] lg:h-[520px] lg:w-1/2">
+            <img
+              alt="Bolsas de café de especialidad Cafeoteca de distintas regiones de Costa Rica con sello World's 100 Best Coffee Shops"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCntQ0eW-ZyfLsa5NL0vE34jLgktpfOZhBbz5BZTrqc_iCTSiDkHuRUdrtCuOqVEzt0rkyyvOWZhzAFPMhFHqHsb8YqGnOwwxQgln3KKFiEcFxhGdBFZpr7SpQpRPp2zGwBieJ1E6UcscL0GA63JrfZ2DZesOSiDcFym_AwpQO8Sw32hTzG0mftH_KLE3NWt5pWLG9UdAiip8b0JprIbIGDbrpYLMr-9_KGl-3AQnEPOaE79xO9SWB_pDml0jUkRdrSP4rB-3IC8dc"
+              loading="eager"
+              width="600"
+              height="520"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-gray-900/90" />
+          </div>
+
+          <!-- Text side -->
+          <div class="relative p-6 sm:p-8 lg:p-12 lg:w-1/2 lg:flex lg:flex-col lg:justify-center -mt-16 lg:mt-0">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="bg-secondary text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                Nominados
+              </span>
+              <span class="material-icons-outlined text-secondary text-2xl">emoji_events</span>
+            </div>
+
+            <h1 class="text-white font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-4">
+              World's 100 Best<br />Coffee Shops
+            </h1>
+
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-3 max-w-lg">
+              Nuestro proyecto se ha construido con el tiempo. Con café bien trabajado, con criterio y con muchas personas valiosas alrededor.
+            </p>
+            <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 max-w-lg">
+              La primera cafetería de Costa Rica en formar parte de esta lista.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+
+              <NuxtLink
+                to="/menu"
+                class="bg-white/10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-lg border border-white/20 active:scale-95 transition-transform flex items-center justify-center gap-2 hover:bg-white/20"
+              >
+                <span>Ver Menú</span>
+                <span class="material-icons-outlined text-sm">arrow_forward</span>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule + Explore: side by side on desktop -->
+    <div class="lg:flex lg:gap-8 lg:px-8 lg:mb-12">
+      <!-- Schedule Banner -->
+      <section class="px-4 sm:px-6 lg:px-0 mb-8 lg:mb-0 lg:w-1/3">
+        <div class="bg-gradient-to-r from-primary to-pink-500 rounded-xl p-5 lg:p-6 text-white shadow-lg relative overflow-hidden h-full">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl transform translate-x-10 -translate-y-10" />
+          <div class="flex items-start gap-3 relative z-10">
+            <span class="material-icons-outlined text-3xl">schedule</span>
+            <div>
+              <h2 class="font-display font-bold text-lg mb-1">Nuevo Horario</h2>
+              <p class="text-sm opacity-90 mb-1"><span class="font-bold">Mar - Sáb:</span> 7am - 7pm</p>
+              <p class="text-sm opacity-90"><span class="font-bold">Domingos:</span> 7am - 6pm</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explore Section -->
+      <section class="pl-4 sm:pl-6 lg:pl-0 mb-8 lg:mb-0 lg:w-2/3">
+        <div class="flex justify-between items-center pr-4 sm:pr-6 lg:pr-0 mb-4">
+          <h2 class="font-display font-bold text-xl text-gray-900">Explorar</h2>
+        </div>
+        <div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2 pr-4 sm:pr-6 lg:pr-0 lg:overflow-x-visible lg:grid lg:grid-cols-3">
           <NuxtLink
-            to="/menu"
-            class="bg-white text-black font-semibold py-3 px-6 rounded-lg w-full sm:w-auto bg-opacity-90 active:scale-95 transition-transform flex items-center justify-center gap-2"
+            v-for="item in exploreItems"
+            :key="item.title"
+            :to="item.to"
+            class="flex-shrink-0 w-36 lg:w-full flex flex-col gap-2 group cursor-pointer"
           >
-            <span>Ver Menú</span>
-            <span class="material-icons-outlined text-sm">arrow_forward</span>
+            <div class="w-36 lg:w-full h-48 lg:h-56 rounded-2xl overflow-hidden relative shadow-md">
+              <img
+                :alt="item.alt"
+                :src="item.image"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                width="400"
+                height="256"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div class="absolute bottom-3 left-3 text-white font-bold font-display text-sm lg:text-base" v-html="item.title" />
+            </div>
           </NuxtLink>
         </div>
-      </div>
-    </section>
-
-    <!-- Schedule Banner -->
-    <section class="px-4 mb-8">
-      <div class="bg-gradient-to-r from-primary to-pink-500 rounded-xl p-5 text-white shadow-lg relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl transform translate-x-10 -translate-y-10" />
-        <div class="flex items-start gap-3 relative z-10">
-          <span class="material-icons-outlined text-3xl">schedule</span>
-          <div>
-            <h2 class="font-display font-bold text-lg mb-1">Nuevo Horario</h2>
-            <p class="text-sm opacity-90 mb-1"><span class="font-bold">Mar - Sáb:</span> 7am - 7pm</p>
-            <p class="text-sm opacity-90"><span class="font-bold">Domingos:</span> 7am - 6pm</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Explore Section -->
-    <section class="pl-4 mb-8">
-      <div class="flex justify-between items-center pr-4 mb-4">
-        <h2 class="font-display font-bold text-xl text-gray-900">Explorar</h2>
-      </div>
-      <div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2 pr-4">
-        <NuxtLink
-          v-for="item in exploreItems"
-          :key="item.title"
-          :to="item.to"
-          class="flex-shrink-0 w-36 flex flex-col gap-2 group cursor-pointer"
-        >
-          <div class="w-36 h-48 rounded-2xl overflow-hidden relative shadow-md">
-            <img
-              :alt="item.alt"
-              :src="item.image"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              loading="lazy"
-              width="144"
-              height="192"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div class="absolute bottom-3 left-3 text-white font-bold font-display text-sm" v-html="item.title" />
-          </div>
-        </NuxtLink>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Team / Almácigo Section -->
-    <section class="px-4 mb-20">
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative overflow-hidden">
+    <section class="px-4 sm:px-6 lg:px-8 mb-20 lg:mb-16">
+      <div class="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-sm border border-gray-100 relative overflow-hidden lg:flex lg:items-center lg:gap-10">
         <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-200 rounded-full blur-2xl opacity-50" />
-        <div class="relative z-10">
+        <div class="relative z-10 lg:flex-1">
           <div class="flex items-center justify-between mb-4">
             <div
               class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-xs text-center leading-none p-1"
@@ -88,8 +113,8 @@
             </div>
             <span class="text-xs font-bold tracking-widest text-purple-600 uppercase">Proyecto Almácigo</span>
           </div>
-          <h3 class="text-2xl font-display font-bold mb-3 text-gray-900">Conoce a nuestro equipo</h3>
-          <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+          <h3 class="text-2xl lg:text-3xl font-display font-bold mb-3 text-gray-900">Conoce a nuestro equipo</h3>
+          <p class="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
             Detrás de cada taza hay una historia. Conoce a Rebe, nuestra pastelera que transforma ingredientes locales en
             obras de arte comestibles.
           </p>
