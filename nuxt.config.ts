@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'vercel',
     externals: {
-      inline: ['vue', '@vue/compiler-dom', '@vue/shared'],
+      inline: ['vue', '@vue/compiler-dom', '@vue/shared', 'entities'],
     },
   },
 

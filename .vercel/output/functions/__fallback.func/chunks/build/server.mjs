@@ -11,7 +11,6 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import 'entities/decode';
 import 'estree-walker';
 import 'source-map-js';
 import '@vue/runtime-dom';
