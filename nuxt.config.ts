@@ -7,10 +7,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
   ],
 
-  build: {
-    transpile: ['consola'],
-  },
-
   app: {
     head: {
       htmlAttrs: { lang: 'es' },

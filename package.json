@@ -10,16 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^2.2.1",
-    "consola": "^3.4.2",
-    "nuxt": "^3.16.0",
-    "vue": "^3.5.27"
   },
   "devDependencies": {
+    "@nuxt/icon": "^2.2.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/seo": "^3.4.0",
     "@nuxtjs/tailwindcss": "^6.13.2",
+    "nuxt": "^3.16.0",
     "typescript": "^5.9.3",
+    "vue": "^3.5.27",
     "vue-tsc": "^3.2.4"
   }
 }
