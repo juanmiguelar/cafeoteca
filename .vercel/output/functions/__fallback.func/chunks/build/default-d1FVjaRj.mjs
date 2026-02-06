@@ -1,9 +1,14 @@
 import { _ as __nuxt_component_0$1 } from './nuxt-link-D5B5-Q_B.mjs';
-import { mergeProps, defineComponent, ref, withCtx, createVNode, createTextVNode, toDisplayString, unref, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrRenderAttr, ssrRenderList, ssrInterpolate, ssrRenderTeleport } from 'vue/server-renderer';
 import { p as publicAssetsURL } from '../routes/renderer.mjs';
 import { _ as _export_sfc } from './server.mjs';
-import '../nitro/nitro.mjs';
+import { v as vueExports } from '../nitro/nitro.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrRenderAttr, ssrRenderList, ssrInterpolate, ssrRenderTeleport } from '@vue/server-renderer';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/plugins';
+import 'unhead/utils';
+import '@unhead/addons';
+import '@unhead/schema-org/vue';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -11,23 +16,20 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
+import '@vue/shared';
+import 'entities/decode';
+import 'estree-walker';
+import 'source-map-js';
+import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
-import 'vue-bundle-renderer/runtime';
-import 'unhead/server';
-import 'devalue';
-import 'unhead/plugins';
-import 'unhead/utils';
-import 'vue-router';
-import '@unhead/addons';
-import '@unhead/schema-org/vue';
 
 const _imports_0 = publicAssetsURL("/logo.png");
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const _sfc_main$2 = /* @__PURE__ */ vueExports.defineComponent({
   __name: "AppHeader",
   __ssrInlineRender: true,
   setup(__props) {
-    const isMenuOpen = ref(false);
+    const isMenuOpen = vueExports.ref(false);
     const navLinks = [
       { to: "/", label: "Inicio" },
       { to: "/menu", label: "Men\xFA" },
@@ -35,18 +37,18 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     ];
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "sticky top-0 z-50 bg-background-light/80 backdrop-blur-md shadow-sm transition-all duration-300" }, _attrs))} data-v-72f5f464><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" data-v-72f5f464><button aria-label="Abrir men\xFA de navegaci\xF3n" class="p-2 rounded-full hover:bg-gray-100 transition-colors md:hidden" data-v-72f5f464><span class="material-icons-outlined text-gray-700" data-v-72f5f464>menu</span></button>`);
+      _push(`<header${ssrRenderAttrs(vueExports.mergeProps({ class: "sticky top-0 z-50 bg-background-light/80 backdrop-blur-md shadow-sm transition-all duration-300" }, _attrs))} data-v-72f5f464><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center" data-v-72f5f464><button aria-label="Abrir men\xFA de navegaci\xF3n" class="p-2 rounded-full hover:bg-gray-100 transition-colors md:hidden" data-v-72f5f464><span class="material-icons-outlined text-gray-700" data-v-72f5f464>menu</span></button>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "flex items-center gap-2",
         "aria-label": "Cafeoteca Inicio"
       }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
+        default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<img${ssrRenderAttr("src", _imports_0)} alt="Cafeoteca Logo" class="h-10 w-auto" data-v-72f5f464${_scopeId}>`);
           } else {
             return [
-              createVNode("img", {
+              vueExports.createVNode("img", {
                 src: _imports_0,
                 alt: "Cafeoteca Logo",
                 class: "h-10 w-auto"
@@ -64,12 +66,12 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
           class: "text-sm font-body font-semibold text-gray-700 hover:text-primary transition-colors uppercase tracking-wider",
           "active-class": "text-primary"
         }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
+          default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
               _push2(`${ssrInterpolate(link.label)}`);
             } else {
               return [
-                createTextVNode(toDisplayString(link.label), 1)
+                vueExports.createTextVNode(vueExports.toDisplayString(link.label), 1)
               ];
             }
           }),
@@ -82,19 +84,19 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
         "aria-label": "Ubicaci\xF3n y contacto",
         class: "p-2 rounded-full hover:bg-gray-100 transition-colors md:hidden"
       }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
+        default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<span class="material-icons-outlined text-gray-700" data-v-72f5f464${_scopeId}>place</span>`);
           } else {
             return [
-              createVNode("span", { class: "material-icons-outlined text-gray-700" }, "place")
+              vueExports.createVNode("span", { class: "material-icons-outlined text-gray-700" }, "place")
             ];
           }
         }),
         _: 1
       }, _parent));
       ssrRenderTeleport(_push, (_push2) => {
-        if (unref(isMenuOpen)) {
+        if (vueExports.unref(isMenuOpen)) {
           _push2(`<div class="fixed inset-0 z-[100] md:hidden" data-v-72f5f464><div class="absolute inset-0 bg-black/40" data-v-72f5f464></div><nav class="absolute left-0 top-0 h-full w-72 bg-background-light shadow-2xl p-8 flex flex-col gap-6" data-v-72f5f464><button aria-label="Cerrar men\xFA" class="self-end p-2 rounded-full hover:bg-gray-100" data-v-72f5f464><span class="material-icons-outlined" data-v-72f5f464>close</span></button><!--[-->`);
           ssrRenderList(navLinks, (link) => {
             _push2(ssrRenderComponent(_component_NuxtLink, {
@@ -103,12 +105,12 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               class: "text-lg font-display font-semibold text-gray-800 hover:text-primary transition-colors",
               onClick: ($event) => isMenuOpen.value = false
             }, {
-              default: withCtx((_, _push3, _parent2, _scopeId) => {
+              default: vueExports.withCtx((_, _push3, _parent2, _scopeId) => {
                 if (_push3) {
                   _push3(`${ssrInterpolate(link.label)}`);
                 } else {
                   return [
-                    createTextVNode(toDisplayString(link.label), 1)
+                    vueExports.createTextVNode(vueExports.toDisplayString(link.label), 1)
                   ];
                 }
               }),
@@ -126,7 +128,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 });
 const _sfc_setup$2 = _sfc_main$2.setup;
 _sfc_main$2.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/AppHeader.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
@@ -134,17 +136,17 @@ const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId
 const _sfc_main$1 = {};
 function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLink = __nuxt_component_0$1;
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-surface-dark text-white mt-12" }, _attrs))}><div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 lg:py-14"><div class="lg:flex lg:justify-between lg:items-start lg:gap-12"><div class="text-center lg:text-left mb-8 lg:mb-0">`);
+  _push(`<footer${ssrRenderAttrs(vueExports.mergeProps({ class: "bg-surface-dark text-white mt-12" }, _attrs))}><div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 lg:py-14"><div class="lg:flex lg:justify-between lg:items-start lg:gap-12"><div class="text-center lg:text-left mb-8 lg:mb-0">`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
     class: "inline-block mb-4"
   }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
+    default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`<img${ssrRenderAttr("src", _imports_0)} alt="Cafeoteca" class="h-12 w-auto brightness-0 invert mx-auto lg:mx-0"${_scopeId}>`);
       } else {
         return [
-          createVNode("img", {
+          vueExports.createVNode("img", {
             src: _imports_0,
             alt: "Cafeoteca",
             class: "h-12 w-auto brightness-0 invert mx-auto lg:mx-0"
@@ -159,12 +161,12 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
     to: "/",
     class: "text-gray-400 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider"
   }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
+    default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`Inicio`);
       } else {
         return [
-          createTextVNode("Inicio")
+          vueExports.createTextVNode("Inicio")
         ];
       }
     }),
@@ -174,12 +176,12 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
     to: "/menu",
     class: "text-gray-400 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider"
   }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
+    default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`Men\xFA`);
       } else {
         return [
-          createTextVNode("Men\xFA")
+          vueExports.createTextVNode("Men\xFA")
         ];
       }
     }),
@@ -189,12 +191,12 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
     to: "/nosotros",
     class: "text-gray-400 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider"
   }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
+    default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
         _push2(`Nosotros`);
       } else {
         return [
-          createTextVNode("Nosotros")
+          vueExports.createTextVNode("Nosotros")
         ];
       }
     }),
@@ -204,7 +206,7 @@ function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/AppFooter.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
@@ -213,7 +215,7 @@ const _sfc_main = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_AppHeader = __nuxt_component_0;
   const _component_AppFooter = __nuxt_component_1;
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative min-h-screen" }, _attrs))}><div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-20"><div class="absolute top-[-10%] left-[-20%] w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-secondary organic-blob-1 blur-3xl mix-blend-multiply"></div><div class="absolute top-[20%] right-[-20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-primary organic-blob-2 blur-3xl mix-blend-multiply"></div><div class="absolute bottom-[-10%] left-[10%] w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] bg-tertiary organic-blob-1 blur-3xl mix-blend-multiply"></div></div><div class="relative z-10 pb-24 md:pb-8">`);
+  _push(`<div${ssrRenderAttrs(vueExports.mergeProps({ class: "relative min-h-screen" }, _attrs))}><div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-20"><div class="absolute top-[-10%] left-[-20%] w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-secondary organic-blob-1 blur-3xl mix-blend-multiply"></div><div class="absolute top-[20%] right-[-20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-primary organic-blob-2 blur-3xl mix-blend-multiply"></div><div class="absolute bottom-[-10%] left-[10%] w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] bg-tertiary organic-blob-1 blur-3xl mix-blend-multiply"></div></div><div class="relative z-10 pb-24 md:pb-8">`);
   _push(ssrRenderComponent(_component_AppHeader, null, null, _parent));
   _push(`<main class="max-w-7xl mx-auto">`);
   ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
@@ -223,7 +225,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("layouts/default.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };

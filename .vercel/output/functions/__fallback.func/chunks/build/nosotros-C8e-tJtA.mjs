@@ -1,9 +1,14 @@
 import { _ as _sfc_main$1 } from './SeoMeta-7ENNswF2.mjs';
-import { useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from './server.mjs';
+import { v as vueExports } from '../nitro/nitro.mjs';
+import { ssrRenderAttrs, ssrRenderComponent } from '@vue/server-renderer';
 import '@unhead/schema-org/vue';
-import '../nitro/nitro.mjs';
+import '../routes/renderer.mjs';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/plugins';
+import 'unhead/utils';
+import '@unhead/addons';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -11,16 +16,13 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
+import '@vue/shared';
+import 'entities/decode';
+import 'estree-walker';
+import 'source-map-js';
+import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
-import '../routes/renderer.mjs';
-import 'vue-bundle-renderer/runtime';
-import 'unhead/server';
-import 'devalue';
-import 'unhead/plugins';
-import 'unhead/utils';
-import 'vue-router';
-import '@unhead/addons';
 
 const _sfc_main = {
   name: "NosotrosPage"
@@ -33,7 +35,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
 }
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/nosotros.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };

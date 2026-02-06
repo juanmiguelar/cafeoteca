@@ -1,9 +1,15 @@
 import { _ as _sfc_main$1 } from './SeoMeta-7ENNswF2.mjs';
 import { _ as __nuxt_component_0 } from './nuxt-link-D5B5-Q_B.mjs';
-import { defineComponent, withCtx, createVNode, createTextVNode, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderAttr } from 'vue/server-renderer';
+import { v as vueExports } from '../nitro/nitro.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderAttr } from '@vue/server-renderer';
 import './server.mjs';
-import '../nitro/nitro.mjs';
+import '../routes/renderer.mjs';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/plugins';
+import 'unhead/utils';
+import '@unhead/addons';
+import '@unhead/schema-org/vue';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -11,22 +17,18 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
+import '@vue/shared';
+import 'entities/decode';
+import 'estree-walker';
+import 'source-map-js';
+import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
-import '../routes/renderer.mjs';
-import 'vue-bundle-renderer/runtime';
-import 'unhead/server';
-import 'devalue';
-import 'unhead/plugins';
-import 'unhead/utils';
-import 'vue-router';
-import '@unhead/addons';
-import '@unhead/schema-org/vue';
 
 const __default__ = {
   name: "HomePage"
 };
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _sfc_main = /* @__PURE__ */ vueExports.defineComponent({
   ...__default__,
   __ssrInlineRender: true,
   setup(__props) {
@@ -60,13 +62,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         to: "/menu",
         class: "bg-white/10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-lg border border-white/20 active:scale-95 transition-transform flex items-center justify-center gap-2 hover:bg-white/20"
       }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
+        default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`<span${_scopeId}>Ver Men\xFA</span><span class="material-icons-outlined text-sm"${_scopeId}>arrow_forward</span>`);
           } else {
             return [
-              createVNode("span", null, "Ver Men\xFA"),
-              createVNode("span", { class: "material-icons-outlined text-sm" }, "arrow_forward")
+              vueExports.createVNode("span", null, "Ver Men\xFA"),
+              vueExports.createVNode("span", { class: "material-icons-outlined text-sm" }, "arrow_forward")
             ];
           }
         }),
@@ -79,14 +81,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           to: item.to,
           class: "flex-shrink-0 w-36 lg:w-full flex flex-col gap-2 group cursor-pointer"
         }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
+          default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
             var _a;
             if (_push2) {
               _push2(`<div class="w-36 lg:w-full h-48 lg:h-56 rounded-2xl overflow-hidden relative shadow-md"${_scopeId}><img${ssrRenderAttr("alt", item.alt)}${ssrRenderAttr("src", item.image)} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" width="400" height="256"${_scopeId}><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"${_scopeId}></div><div class="absolute bottom-3 left-3 text-white font-bold font-display text-sm lg:text-base"${_scopeId}>${(_a = item.title) != null ? _a : ""}</div></div>`);
             } else {
               return [
-                createVNode("div", { class: "w-36 lg:w-full h-48 lg:h-56 rounded-2xl overflow-hidden relative shadow-md" }, [
-                  createVNode("img", {
+                vueExports.createVNode("div", { class: "w-36 lg:w-full h-48 lg:h-56 rounded-2xl overflow-hidden relative shadow-md" }, [
+                  vueExports.createVNode("img", {
                     alt: item.alt,
                     src: item.image,
                     class: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-500",
@@ -94,8 +96,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                     width: "400",
                     height: "256"
                   }, null, 8, ["alt", "src"]),
-                  createVNode("div", { class: "absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" }),
-                  createVNode("div", {
+                  vueExports.createVNode("div", { class: "absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" }),
+                  vueExports.createVNode("div", {
                     class: "absolute bottom-3 left-3 text-white font-bold font-display text-sm lg:text-base",
                     innerHTML: item.title
                   }, null, 8, ["innerHTML"])
@@ -111,13 +113,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         to: "/nosotros",
         class: "text-sm font-bold text-primary hover:underline flex items-center gap-1"
       }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
+        default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(` Leer historia completa <span class="material-icons-outlined text-sm"${_scopeId}>arrow_forward</span>`);
           } else {
             return [
-              createTextVNode(" Leer historia completa "),
-              createVNode("span", { class: "material-icons-outlined text-sm" }, "arrow_forward")
+              vueExports.createTextVNode(" Leer historia completa "),
+              vueExports.createVNode("span", { class: "material-icons-outlined text-sm" }, "arrow_forward")
             ];
           }
         }),
@@ -129,7 +131,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
 });
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
