@@ -7,7 +7,6 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import '@vue/shared';
 import 'entities/decode';
 import 'estree-walker';
 import 'source-map-js';

@@ -1,4 +1,4 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { v as vueExports, k as hasProtocol, l as isScriptProtocol, h as joinURL, m as withQuery, n as defu, s as sanitizeStatusCode, o as getContext, $ as $fetch, e as createError$1, p as executeAsync, q as withoutTrailingSlash, t as titleCase, r as camelCase, x as withTrailingSlash, y as stringifyQuery$1, z as parseURL$1, w as withLeadingSlash, A as withBase } from '../nitro/nitro.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { v as vueExports, l as hasProtocol, m as isScriptProtocol, h as joinURL, n as withQuery, o as defu, s as sanitizeStatusCode, p as getContext, $ as $fetch, e as createError$1, q as executeAsync, r as withoutTrailingSlash, t as titleCase, x as camelCase, y as withTrailingSlash, z as stringifyQuery$1, A as parseURL$1, w as withLeadingSlash, B as withBase } from '../nitro/nitro.mjs';
 import { u as useHead$1, h as headSymbol, b as baseURL, a as useSeoMeta$1 } from '../routes/renderer.mjs';
 import { InferSeoMetaPlugin } from '@unhead/addons';
 import { TemplateParamsPlugin } from 'unhead/plugins';
@@ -11,7 +11,6 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import '@vue/shared';
 import 'entities/decode';
 import 'estree-walker';
 import 'source-map-js';
