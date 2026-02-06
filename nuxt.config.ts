@@ -45,12 +45,7 @@ export default defineNuxtConfig({
 
 
 
-  nitro: {
-    preset: 'vercel',
-    externals: {
-      inline: ['vue', '@vue/compiler-dom', '@vue/shared', 'entities', 'estree-walker', 'source-map-js', 'magic-string', '@vue/runtime-dom', '@vue/runtime-core', '@vue/reactivity', '@vue/server-renderer'],
-    },
-  },
+
 
   routeRules: {
     // ISR for all pages by default
