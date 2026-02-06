@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
 
+  nitro: {
+    preset: 'vercel',
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',

@@ -1,9 +1,2 @@
 {
-  "builds": [
-    {
-      "src": "nuxt.config.ts",
-      "use": "@vercel/node",
-      "config": { "nodeVersion": "20.x" }
-    }
-  ]
 }
