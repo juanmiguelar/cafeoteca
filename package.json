@@ -1,6 +1,9 @@
 {
   "name": "cafeoteca",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "type": "module",
   "scripts": {
     "build": "nuxt build",
