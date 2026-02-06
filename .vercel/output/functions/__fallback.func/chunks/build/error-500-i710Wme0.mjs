@@ -1,12 +1,8 @@
 import { _ as _export_sfc, u as useHead } from './server.mjs';
 import { v as vueExports } from '../nitro/nitro.mjs';
-import { ssrRenderAttrs, ssrInterpolate } from '@vue/server-renderer';
-import '../routes/renderer.mjs';
-import 'unhead/server';
-import 'devalue';
-import 'unhead/plugins';
-import 'unhead/utils';
+import { e as ssrRenderAttrs_1, i as ssrInterpolate_1 } from '../routes/renderer.mjs';
 import '@unhead/addons';
+import 'unhead/plugins';
 import '@unhead/schema-org/vue';
 import 'node:http';
 import 'node:https';
@@ -15,9 +11,13 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
+import '@vue/compiler-ssr';
+import 'node:stream';
+import 'unhead/server';
+import 'devalue';
+import 'unhead/utils';
 
 const _sfc_main = {
   __name: "error-500",
@@ -60,7 +60,7 @@ const _sfc_main = {
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(vueExports.mergeProps({ class: "antialiased bg-white dark:bg-black dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-black" }, _attrs))} data-v-a01dd0ba><div class="-bottom-1/2 fixed h-1/2 left-0 right-0 spotlight" data-v-a01dd0ba></div><div class="max-w-520px text-center" data-v-a01dd0ba><h1 class="font-medium mb-8 sm:text-10xl text-8xl" data-v-a01dd0ba>${ssrInterpolate(__props.status)}</h1><p class="font-light leading-tight mb-16 px-8 sm:px-0 sm:text-4xl text-xl" data-v-a01dd0ba>${ssrInterpolate(__props.description)}</p></div></div>`);
+      _push(`<div${ssrRenderAttrs_1(vueExports.mergeProps({ class: "antialiased bg-white dark:bg-black dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-black" }, _attrs))} data-v-a01dd0ba><div class="-bottom-1/2 fixed h-1/2 left-0 right-0 spotlight" data-v-a01dd0ba></div><div class="max-w-520px text-center" data-v-a01dd0ba><h1 class="font-medium mb-8 sm:text-10xl text-8xl" data-v-a01dd0ba>${ssrInterpolate_1(__props.status)}</h1><p class="font-light leading-tight mb-16 px-8 sm:px-0 sm:text-4xl text-xl" data-v-a01dd0ba>${ssrInterpolate_1(__props.description)}</p></div></div>`);
     };
   }
 };

@@ -1,9 +1,8 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { v as vueExports, l as hasProtocol, m as isScriptProtocol, h as joinURL, n as withQuery, o as defu, s as sanitizeStatusCode, p as getContext, $ as $fetch, e as createError$1, q as executeAsync, r as withoutTrailingSlash, t as titleCase, x as camelCase, y as withTrailingSlash, z as stringifyQuery$1, A as parseURL$1, w as withLeadingSlash, B as withBase } from '../nitro/nitro.mjs';
-import { u as useHead$1, h as headSymbol, b as baseURL, a as useSeoMeta$1 } from '../routes/renderer.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { v as vueExports, n as hasProtocol, o as isScriptProtocol, k as joinURL, p as withQuery, q as defu, r as sanitizeStatusCode, t as getContext, $ as $fetch, h as createError$1, x as executeAsync, y as withoutTrailingSlash, z as titleCase, A as camelCase, B as withTrailingSlash, C as stringifyQuery$1, D as parseURL$1, w as withLeadingSlash, E as withBase } from '../nitro/nitro.mjs';
+import { u as useHead$1, h as headSymbol, b as baseURL, s as ssrRenderSuspense_1, a as ssrRenderComponent_1, c as ssrRenderVNode, d as useSeoMeta$1 } from '../routes/renderer.mjs';
 import { InferSeoMetaPlugin } from '@unhead/addons';
 import { TemplateParamsPlugin } from 'unhead/plugins';
 import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from '@unhead/schema-org/vue';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from '@vue/server-renderer';
 import 'node:http';
 import 'node:https';
 import 'node:events';
@@ -11,9 +10,10 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
+import '@vue/compiler-ssr';
+import 'node:stream';
 import 'unhead/server';
 import 'devalue';
 import 'unhead/utils';
@@ -3722,10 +3722,10 @@ const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLayout = __nuxt_component_0;
   const _component_NuxtPage = __nuxt_component_1;
-  _push(ssrRenderComponent(_component_NuxtLayout, _attrs, {
+  _push(ssrRenderComponent_1(_component_NuxtLayout, _attrs, {
     default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(ssrRenderComponent(_component_NuxtPage, null, null, _parent2, _scopeId));
+        _push2(ssrRenderComponent_1(_component_NuxtPage, null, null, _parent2, _scopeId));
       } else {
         return [
           vueExports.createVNode(_component_NuxtPage)
@@ -3760,7 +3760,7 @@ const _sfc_main$1 = {
     const _Error = vueExports.defineAsyncComponent(() => import('./error-500-i710Wme0.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
-      _push(ssrRenderComponent(vueExports.unref(ErrorTemplate), vueExports.mergeProps({ status: vueExports.unref(status), statusText: vueExports.unref(statusText), statusCode: vueExports.unref(status), statusMessage: vueExports.unref(statusText), description: vueExports.unref(description), stack: vueExports.unref(stack) }, _attrs), null, _parent));
+      _push(ssrRenderComponent_1(vueExports.unref(ErrorTemplate), vueExports.mergeProps({ status: vueExports.unref(status), statusText: vueExports.unref(statusText), statusCode: vueExports.unref(status), statusMessage: vueExports.unref(statusText), description: vueExports.unref(description), stack: vueExports.unref(stack) }, _attrs), null, _parent));
     };
   }
 };
@@ -3793,18 +3793,18 @@ const _sfc_main = {
     });
     const islandContext = nuxtApp.ssrContext.islandContext;
     return (_ctx, _push, _parent, _attrs) => {
-      ssrRenderSuspense(_push, {
+      ssrRenderSuspense_1(_push, {
         default: () => {
           if (vueExports.unref(abortRender)) {
             _push(`<div></div>`);
           } else if (vueExports.unref(error)) {
-            _push(ssrRenderComponent(vueExports.unref(_sfc_main$1), { error: vueExports.unref(error) }, null, _parent));
+            _push(ssrRenderComponent_1(vueExports.unref(_sfc_main$1), { error: vueExports.unref(error) }, null, _parent));
           } else if (vueExports.unref(islandContext)) {
-            _push(ssrRenderComponent(vueExports.unref(IslandRenderer), { context: vueExports.unref(islandContext) }, null, _parent));
+            _push(ssrRenderComponent_1(vueExports.unref(IslandRenderer), { context: vueExports.unref(islandContext) }, null, _parent));
           } else if (vueExports.unref(SingleRenderer)) {
             ssrRenderVNode(_push, vueExports.createVNode(vueExports.resolveDynamicComponent(vueExports.unref(SingleRenderer)), null, null), _parent);
           } else {
-            _push(ssrRenderComponent(vueExports.unref(AppComponent), null, null, _parent));
+            _push(ssrRenderComponent_1(vueExports.unref(AppComponent), null, null, _parent));
           }
         },
         _: 1

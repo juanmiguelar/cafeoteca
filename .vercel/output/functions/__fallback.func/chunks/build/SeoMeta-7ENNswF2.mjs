@@ -1,7 +1,7 @@
 import { a as useRoute, u as useHead, b as useSchemaOrg } from './server.mjs';
 import { defineLocalBusiness } from '@unhead/schema-org/vue';
 import { v as vueExports } from '../nitro/nitro.mjs';
-import { ssrRenderAttrs } from '@vue/server-renderer';
+import { e as ssrRenderAttrs_1 } from '../routes/renderer.mjs';
 
 const _sfc_main = /* @__PURE__ */ vueExports.defineComponent({
   __name: "SeoMeta",
@@ -75,7 +75,7 @@ const _sfc_main = /* @__PURE__ */ vueExports.defineComponent({
       })
     ]);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}></div>`);
+      _push(`<div${ssrRenderAttrs_1(_attrs)}></div>`);
     };
   }
 });
