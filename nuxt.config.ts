@@ -43,8 +43,15 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  build: {
+    transpile: ['vue'],
+  },
+
   nitro: {
     preset: 'vercel',
+    externals: {
+      traceInclude: ['vue'],
+    },
   },
 
   routeRules: {

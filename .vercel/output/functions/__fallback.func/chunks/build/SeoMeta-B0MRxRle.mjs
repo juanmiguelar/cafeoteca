@@ -1,13 +1,11 @@
-import { defineComponent, computed, useSSRContext } from 'vue';
-import { ssrRenderAttrs } from 'vue/server-renderer';
-import { a as useRoute, u as useHead, b as useSchemaOrg } from './server.mjs';
+import { v as vueExports, a as useRoute$1, u as useHead, b as useSchemaOrg, s as serverRenderer_cjs_prodExports } from './server.mjs';
 import { defineLocalBusiness } from '@unhead/schema-org/vue';
 
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _sfc_main = /* @__PURE__ */ vueExports.defineComponent({
   __name: "SeoMeta",
   __ssrInlineRender: true,
   setup(__props) {
-    const route = useRoute();
+    const route = useRoute$1();
     const seoData = {
       "/": {
         title: "Cafeoteca \u2014 Caf\xE9 de Especialidad en Barrio Escalante, San Jos\xE9",
@@ -22,7 +20,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         description: "Conoce la historia de Cafeoteca, nuestro equipo, el Proyecto Alm\xE1cigo y c\xF3mo llevamos 12 a\xF1os creando cultura de caf\xE9 en San Jos\xE9, Costa Rica."
       }
     };
-    const current = computed(() => {
+    const current = vueExports.computed(() => {
       var _a;
       return (_a = seoData[route.path]) != null ? _a : seoData["/"];
     });
@@ -75,16 +73,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       })
     ]);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(_attrs)}></div>`);
+      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(_attrs)}></div>`);
     };
   }
 });
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SeoMeta.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 
 export { _sfc_main as _ };
-//# sourceMappingURL=SeoMeta-7ENNswF2.mjs.map
+//# sourceMappingURL=SeoMeta-B0MRxRle.mjs.map

@@ -5,7 +5,9 @@ import { Buffer as Buffer$1 } from 'node:buffer';
 import { promises, existsSync } from 'node:fs';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import { createHash } from 'node:crypto';
-import { toValue } from 'vue';
+import * as compilerDom from '@vue/compiler-dom';
+import * as runtimeDom from '@vue/runtime-dom';
+import * as shared from '@vue/shared';
 import { createConsola } from 'consola';
 import { XMLParser } from 'fast-xml-parser';
 
@@ -4053,7 +4055,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "2b0692cb-4d90-43ab-a146-60728ab51dcb",
+    "buildId": "3e889b2f-5eb0-4078-a537-5503b63fc18c",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4903,6 +4905,95 @@ function stringifyString(str) {
   return result;
 }
 
+function getDefaultExportFromNamespaceIfNotNamed (n) {
+	return n && Object.prototype.hasOwnProperty.call(n, 'default') && Object.keys(n).length === 1 ? n['default'] : n;
+}
+
+var vue = {exports: {}};
+
+var vue_cjs_prod = {};
+
+const require$$0 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(compilerDom);
+
+const require$$1 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(runtimeDom);
+
+const require$$2 = /*@__PURE__*/getDefaultExportFromNamespaceIfNotNamed(shared);
+
+/**
+* vue v3.5.27
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
+
+(function (exports$1) {
+
+	Object.defineProperty(exports$1, '__esModule', { value: true });
+
+	var compilerDom = require$$0;
+	var runtimeDom = require$$1;
+	var shared = require$$2;
+
+	function _interopNamespaceDefault(e) {
+	  var n = Object.create(null);
+	  if (e) {
+	    for (var k in e) {
+	      n[k] = e[k];
+	    }
+	  }
+	  n.default = e;
+	  return Object.freeze(n);
+	}
+
+	var runtimeDom__namespace = /*#__PURE__*/_interopNamespaceDefault(runtimeDom);
+
+	const compileCache = /* @__PURE__ */ Object.create(null);
+	function compileToFunction(template, options) {
+	  if (!shared.isString(template)) {
+	    if (template.nodeType) {
+	      template = template.innerHTML;
+	    } else {
+	      return shared.NOOP;
+	    }
+	  }
+	  const key = shared.genCacheKey(template, options);
+	  const cached = compileCache[key];
+	  if (cached) {
+	    return cached;
+	  }
+	  if (template[0] === "#") {
+	    const el = document.querySelector(template);
+	    template = el ? el.innerHTML : ``;
+	  }
+	  const opts = shared.extend(
+	    {
+	      hoistStatic: true,
+	      onError: void 0,
+	      onWarn: shared.NOOP
+	    },
+	    options
+	  );
+	  if (!opts.isCustomElement && typeof customElements !== "undefined") {
+	    opts.isCustomElement = (tag) => !!customElements.get(tag);
+	  }
+	  const { code } = compilerDom.compile(template, opts);
+	  const render = new Function("Vue", code)(runtimeDom__namespace);
+	  render._rc = true;
+	  return compileCache[key] = render;
+	}
+	runtimeDom.registerRuntimeCompiler(compileToFunction);
+
+	exports$1.compile = compileToFunction;
+	Object.keys(runtimeDom).forEach(function (k) {
+	  if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports$1, k)) exports$1[k] = runtimeDom[k];
+	}); 
+} (vue_cjs_prod));
+
+{
+  vue.exports = vue_cjs_prod;
+}
+
+var vueExports = vue.exports;
+
 function normalizeSiteConfig(config) {
   if (typeof config.indexable !== "undefined")
     config.indexable = String(config.indexable) !== "false";
@@ -4955,7 +5046,7 @@ function createSiteConfigStack(options) {
     for (const o in stack.sort((a, b) => (a._priority || 0) - (b._priority || 0))) {
       for (const k in stack[o]) {
         const key = k;
-        const val = options2?.resolveRefs ? toValue(stack[o][k]) : stack[o][k];
+        const val = options2?.resolveRefs ? vueExports.toValue(stack[o][k]) : stack[o][k];
         if (!k.startsWith("_") && typeof val !== "undefined" && val !== "") {
           siteConfig[k] = val;
           if (typeof stack[o]._priority !== "undefined" && stack[o]._priority !== -1) {
@@ -4996,7 +5087,7 @@ const _HHELznRLPmfSzSuVFT2LT_NCu4v0GcWWkO_sKbI5ic = defineNitroPlugin(async (nit
     const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (false);
     if (noSSR) {
       const siteConfig = Object.fromEntries(
-        Object.entries(getSiteConfig(event)).map(([k, v]) => [k, toValue(v)])
+        Object.entries(getSiteConfig(event)).map(([k, v]) => [k, vueExports.toValue(v)])
       );
       ctx.body.push(`<script>window.__NUXT_SITE_CONFIG__=${devalue(siteConfig)}<\/script>`);
     }
@@ -8047,5 +8138,5 @@ const listener = function(req, res) {
   return handler(req, res);
 };
 
-export { $fetch$1 as $, parseQuery as A, listener as B, getResponseStatus as a, defineRenderHandler as b, getQuery as c, decodePath as d, createError$1 as e, getRouteRules as f, getResponseStatusText as g, joinURL as h, useNitroApp as i, joinRelativeURL as j, hasProtocol as k, isScriptProtocol as l, defu as m, getContext as n, executeAsync as o, withoutTrailingSlash as p, camelCase as q, withTrailingSlash as r, sanitizeStatusCode as s, titleCase as t, useRuntimeConfig as u, stringifyQuery as v, withQuery as w, parseURL as x, withLeadingSlash as y, withBase as z };
+export { $fetch$1 as $, withBase as A, parseQuery as B, listener as C, getResponseStatus as a, defineRenderHandler as b, getQuery as c, decodePath as d, createError$1 as e, getRouteRules as f, getResponseStatusText as g, joinURL as h, useNitroApp as i, joinRelativeURL as j, hasProtocol as k, isScriptProtocol as l, withQuery as m, defu as n, getContext as o, executeAsync as p, withoutTrailingSlash as q, camelCase as r, sanitizeStatusCode as s, titleCase as t, useRuntimeConfig as u, vueExports as v, withLeadingSlash as w, withTrailingSlash as x, stringifyQuery as y, parseURL as z };
 //# sourceMappingURL=nitro.mjs.map

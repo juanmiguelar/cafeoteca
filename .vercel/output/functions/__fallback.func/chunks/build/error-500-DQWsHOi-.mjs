@@ -1,6 +1,7 @@
-import { mergeProps, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrInterpolate } from 'vue/server-renderer';
-import { _ as _export_sfc, u as useHead } from './server.mjs';
+import { _ as _export_sfc, u as useHead, s as serverRenderer_cjs_prodExports, v as vueExports } from './server.mjs';
+import 'entities/decode';
+import 'estree-walker';
+import 'source-map-js';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -9,17 +10,20 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
+import '@vue/compiler-dom';
+import '@vue/runtime-dom';
+import '@vue/shared';
 import 'consola';
 import 'fast-xml-parser';
 import '../routes/renderer.mjs';
-import 'vue-bundle-renderer/runtime';
 import 'unhead/server';
+import '@vue/server-renderer';
 import 'devalue';
 import 'unhead/plugins';
 import 'unhead/utils';
-import 'vue-router';
 import '@unhead/addons';
 import '@unhead/schema-org/vue';
+import 'node:stream';
 
 const _sfc_main = {
   __name: "error-500",
@@ -62,17 +66,17 @@ const _sfc_main = {
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "antialiased bg-white dark:bg-black dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-black" }, _attrs))} data-v-a01dd0ba><div class="-bottom-1/2 fixed h-1/2 left-0 right-0 spotlight" data-v-a01dd0ba></div><div class="max-w-520px text-center" data-v-a01dd0ba><h1 class="font-medium mb-8 sm:text-10xl text-8xl" data-v-a01dd0ba>${ssrInterpolate(__props.status)}</h1><p class="font-light leading-tight mb-16 px-8 sm:px-0 sm:text-4xl text-xl" data-v-a01dd0ba>${ssrInterpolate(__props.description)}</p></div></div>`);
+      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(vueExports.mergeProps({ class: "antialiased bg-white dark:bg-black dark:text-white font-sans grid min-h-screen overflow-hidden place-content-center text-black" }, _attrs))} data-v-a01dd0ba><div class="-bottom-1/2 fixed h-1/2 left-0 right-0 spotlight" data-v-a01dd0ba></div><div class="max-w-520px text-center" data-v-a01dd0ba><h1 class="font-medium mb-8 sm:text-10xl text-8xl" data-v-a01dd0ba>${serverRenderer_cjs_prodExports.ssrInterpolate(__props.status)}</h1><p class="font-light leading-tight mb-16 px-8 sm:px-0 sm:text-4xl text-xl" data-v-a01dd0ba>${serverRenderer_cjs_prodExports.ssrInterpolate(__props.description)}</p></div></div>`);
     };
   }
 };
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
+  const ssrContext = vueExports.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("node_modules/nuxt/dist/app/components/error-500.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const error500 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a01dd0ba"]]);
 
 export { error500 as default };
-//# sourceMappingURL=error-500-i710Wme0.mjs.map
+//# sourceMappingURL=error-500-DQWsHOi-.mjs.map
