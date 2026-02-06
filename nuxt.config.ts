@@ -7,12 +7,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
   ],
 
-  nitro: {
-    externals: {
-      inline: ['consola'],
-    },
-  },
-
   app: {
     head: {
       htmlAttrs: { lang: 'es' },
