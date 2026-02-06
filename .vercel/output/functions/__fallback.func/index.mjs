@@ -6,8 +6,6 @@ import 'node:buffer';
 import 'node:fs';
 import 'node:path';
 import 'node:crypto';
-import 'estree-walker';
-import 'source-map-js';
 import '@vue/runtime-dom';
 import 'consola';
 import 'fast-xml-parser';
