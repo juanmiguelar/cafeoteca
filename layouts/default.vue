@@ -18,7 +18,7 @@
     <!-- Floating Reservar button — mobile & tablet only, hidden on desktop (nav has it) -->
     <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 w-full px-4 max-w-md md:hidden">
       <a
-        href="https://wa.me/50688888888"
+        href="https://wa.me/50684533232"
         target="_blank"
         rel="noopener noreferrer"
         class="w-full bg-green-600 text-white rounded-full py-4 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 group"
